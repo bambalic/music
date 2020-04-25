@@ -1,0 +1,158 @@
+#header{
+    background-color: rgb(148, 170, 148);
+    height: 20px;
+}
+#nav{
+    padding-top: 20px;
+    background-color: rgb(44, 43, 40);
+    height: 100px;
+}
+#nav a{
+    font-size: 20px;
+}
+#footer{
+    background-color: rgb(44, 43, 40);
+    height: 20px;
+}
+
+#main{
+    color: black;
+    background-color: rgb(148, 170, 148);
+    font-size: 20px;
+    text-align: right;
+    padding-top: 150px;
+}
+/* .slika{
+    height: 1000px;
+    width: 500px;
+} */
+/* .slika{
+    height: 1000px;
+    width: 500px;
+    display: none;
+} */
+
+
+/* .img-hover:hover {
+    background-image: url("slika.jpg");
+    height: 600px;
+    width: 450px;
+  } */
+
+/* .container1 li {
+	margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 200px;
+} */
+
+/* .hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; } */
+/* .container1 img{display:none;}
+.container1:hover img{display:block} */
+.container1 img{
+    display:none;
+}
+.container1:hover img{
+    display:block;
+    height: 100px;
+}
+/* .container1{
+    background-color: white;
+} */
+#predmeti table{
+    margin: 0 auto;
+}
+#predmeti2{
+    background-color: rgb(44, 43, 40);
+    font-size: 10px;
+}
+
+#about{
+    background-color: rgb(148, 170, 148);
+}
+
+.visina1{
+    height: 500px;
+}
+.visina2{
+    height: 500px;
+}
+
+.boja1{
+    background-color: rgb(44, 43, 40);
+}
+
+.boja2{
+    background-color: rgb(148, 170, 148);
+}
+#licnaStrana{
+    
+}
+#tekst{
+    padding-top: 150px;
+
+}
+#slika img{
+    margin-top: 100px;
+    height: 200px;
+    width: 150px;
+}
+#result{
+    padding: 50px;
+    height: 500px;
+    background-color: rgb(44, 43, 40);
+    font-size: 10px;
+    color: rgb(148, 170, 148);
+}
+#w1{
+    text-align: center;
+    padding: 150px 0;
+}
+#razmak{
+    height: 50px;
+    background-color: rgb(44, 43, 40);
+    color: rgb(148, 170, 148);
+
+}
+th{
+    font-size: 20px;
+}
+#preview{
+    background-color: rgb(148, 170, 148);
+}
+table{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+a{
+    color: black;
+}
+a:any-link{
+    color: black;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+}
+
+h1 {color:rgb(148, 170, 148);; font-size: 250%;}
+#naslov {text-align:center}
+/* a:hover{color:darkblue; font-size:105%;} */
+p {text-align:center;}
+h4 {font-style:italic; color: blue}
+h2 {color:blue; text-align:center}
+ol {font-size:200%}
+ul {font-size:200%}
+.navigacija{width: 100000; height: 10000px; background-color: blue; color: blue;}
+
+
+/* body {
+    background-image: url("pattern.jpg");
+    background-size: 100% 1080px;
+    background-repeat: no-repeat;}  */
+    

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+        <div id="header" class="col-12 text-center">
+            <p></p>
+        </div>
+    </div>
+    <div id="nav" class="row text-center">
+        <div id="logo" class="col-12">
+            <h1>Music App</h1>
+        </div>
+    </div>
+    
+    <div class="row">
+            <div id="l1" class="col-2 visina1 boja2"> </div>
+            <div id="main" class="col-8 visina1 text-center">
+
+              <form id="form1">
+                <div class="form-group">
+                  <label>artist</label>
+                  <input id="artist" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>song</label>
+                  <input id="song" class="form-control">
+                </div>
+                <!-- <button id="button" type="submit" class="btn btn-primary">Submit</button> -->
+              </form>
+        
+              <button id="button">button</button>
+            </div>
+            <div id="r1" class="col-2 visina1 boja2"> </div>
+        </div>
+        <div class="row" id="razmak">
+          <div class="col-12 text-center">Description</div>
+        </div>
+        <div class="row" id="preview">
+          <div class="col-12 text-center"><a id="link" href=""></a></div>
+        </div>
+        <div class="row">
+          <div id="l1" class="col-2 visina1 boja1"> </div>
+          <div id="result" class="col-8"> 
+              <div id="result1" class="text-center"></div>
+              <!-- <a id="link" href="">preview</a> -->
+          </div>
+          <div id="r1" class="col-2 visina1 boja1"> </div>
+      </div>
+</div>
+
+
+    <script>
+        // var artistName = $('#artist').val();
+        // var songName = $('#song').val();
+        // console.log(artistName);
+        // console.log(songName);
+
+        document.getElementById("button").addEventListener("click",loadText);
+
+
+
+        function loadText(){
+            console.log("radi");
+
+            var artistName = $('#artist').val();
+            var songName = $('#song').val();
+            console.log(artistName);
+            console.log(songName);
+
+            $.get( "https://theaudiodb.com/api/v1/json/1/searchtrack.php?s="+artistName+"&t="+songName, function( data ) {
+            
+            console.log(data);
+            // console.log(data.track[0].idTrack);
+            // console.log(data.track[0].strDescriptionEN);
+            // console.log(data.track[0].idTrack)
+            if(data.track==null){
+              $("#result1").text("doesnt exist");
+              
+            }else{
+              $("#result1").text(data.track[0].strDescriptionEN)
+            }
+            });
+
+            //deezer
+
+
+            console.log("radi");
+
+            var artistName = $('#artist').val();
+            var songName = $('#song').val();
+            console.log(artistName);
+            console.log(songName);
+
+            $.get( 'http://cors-anywhere.herokuapp.com/api.deezer.com/search?q=artist:"'+artistName+'" track:"'+songName+'"', function( data ) {
+            // $.get( 'https://cors-anywhere.herokuapp.com/api.deezer.com/search?q=artist:"aloe blacc" track:"i need a dollar"', function( data ) {
+            
+            console.log(data);
+            // console.log(data.track[0].idTrack);
+            // console.log(data.track[0].strDescriptionEN);
+            // console.log(data.track[0].idTrack)
+            if(data.data[0]==null){
+              $("#result1").text("description doesnt exist");
+              
+            }else{
+              var link=data.data[0].preview;
+              // $("#result1").text('<a href=>Preview</a>');
+              $("#link").attr("href",link);
+              $("#link").text("preview");
+            }
+            
+            });
+        }
+
+        
+    </script>
+    
+</body>
+</html>
